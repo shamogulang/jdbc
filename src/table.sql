@@ -326,3 +326,36 @@ INSERT INTO `grafana`.`city` (`pk`, `p_code`, `c_code`, `name`, `status`) VALUES
 INSERT INTO `grafana`.`city` (`pk`, `p_code`, `c_code`, `name`, `status`) VALUES ('514', '31', '31', '上海', '1');
 INSERT INTO `grafana`.`city` (`pk`, `p_code`, `c_code`, `name`, `status`) VALUES ('515', '1', '31', '上海', '1');
 INSERT INTO `grafana`.`city` (`pk`, `p_code`, `c_code`, `name`, `status`) VALUES ('516', '41', '4107', '新乡市', '1');
+
+CREATE TABLE `tb_employee` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `firstName` varchar(32) NOT NULL DEFAULT '',
+  `lastName` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=121 DEFAULT CHARSET=utf8;
+
+
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('5', 'tom1xx', '29');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('6', 'tom101', '30');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('96', 'Max3', 'Su3');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('97', 'Max3', 'Su3');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('98', 'Max3', 'Su3');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('99', 'Max3', 'Su3');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('100', '130', 'Su');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('101', 'Max1', 'jeff');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('102', 'Max2', 'Su2');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('103', 'Max3', 'Su3');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('106', 'Max3', 'Su3');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('107', 'jeff', 'chan');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('108', 'jeff', 'chan');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('109', 'jeff', 'chan1');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('110', 'jeff', 'chan');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('111', 'jeff', 'chan1');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('112', 'jeff', 'chan1');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('113', '123', 'Eric💤');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('114', '1234', 'Eric👻');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('115', 'jeff', 'chan');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('116', 'jeff', 'chan');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('117', 'jeff', 'chan');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('118', 'jeff1x', 'chan');
+INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('120', 'xxxx', 'xx');

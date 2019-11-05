@@ -1,6 +1,6 @@
-import domain.CityEntity;
-
-import java.lang.reflect.Method;
+import dao.DaoPrepareStatmentUtils;
+import dao.DaoStatementUtils;
+import dao.DaoTransactionUtils;
 
 /**
  * @author chenjianhui on 2019/11/01
@@ -9,14 +9,20 @@ public class Client {
 
     public static void main(String[] args) {
         try {
-            Class clas = CityEntity.class;
-            Method[] methods = clas.getDeclaredMethods();
-            if(methods != null && methods.length > 0){
-                for(Method method : methods){
+            //保存信息到tb_employee
+            //String sql = "insert into tb_employee(firstName,lastName) values('jeff1','chan')";
+            DaoStatementUtils daoStatementUtils = new DaoStatementUtils();
+            //daoStatementUtils.save(sql);
+            //String sql = "select * from tb_employee";
+            //daoStatementUtils.select2(sql);
+            //daoStatementUtils.testSuport();
+            //daoStatementUtils.testMetadata();
+            DaoPrepareStatmentUtils daoPrepareStatmentUtils = new DaoPrepareStatmentUtils();
+            //daoPrepareStatmentUtils.select();
+            //daoPrepareStatmentUtils.update();
 
-                }
-            }
-            clas.getName();
+            DaoTransactionUtils daoTransactionUtils = new DaoTransactionUtils();
+            daoTransactionUtils.update();
         }catch (Exception e){
             System.out.println(e);
         }
