@@ -359,3 +359,43 @@ INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('116
 INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('117', 'jeff', 'chan');
 INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('118', 'jeff1x', 'chan');
 INSERT INTO `grafana`.`tb_employee` (`id`, `firstName`, `lastName`) VALUES ('120', 'xxxx', 'xx');
+
+创建存储过程:
+
+delimiter $$
+CREATE PROCEDURE del_byid(IN mid INT)
+BEGIN
+  DELETE FROM tb_employee where id = mid;
+END $$
+
+CALL del_byid(120);//调用存储过程，会删除id为120的记录
+
+
+delimiter $$
+CREATE PROCEDURE get_byid(IN mid INT,OUT lastName VARCHAR(255))
+BEGIN
+  SELECT tb.lastName into lastName FROM tb_employee tb where id = mid;
+END $$
+
+call get_byid(114,@a);
+SELECT @a;
+
+delimiter $$
+CREATE PROCEDURE get_all()
+BEGIN
+  SELECT *  FROM tb_employee;
+END $$
+
+CALL get_all();
+
+创建方法：
+
+set global log_bin_trust_function_creators=TRUE
+delimiter $$
+CREATE FUNCTION get_sum(num1 INT,num2 INT)
+RETURNS INT
+BEGIN
+   DECLARE a,b INT;
+   set a=num1,b=num2;
+  RETURN a+b;
+END $$
