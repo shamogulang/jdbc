@@ -41,6 +41,11 @@ public class DaoStatementUtils {
         }
     }
 
+    /**
+     * 插入数据，并且获取生产的主键id
+     * @param sql
+     * @return
+     */
     public int save(String sql){
         Connection connection = JdbcConnectionUtils.getConnection();
         Statement statement = null;
@@ -60,6 +65,11 @@ public class DaoStatementUtils {
         return 0;
     }
 
+    /**
+     * 查询请求
+     * @param sql
+     * @return
+     */
     public List select(String sql) {
         Connection connection = JdbcConnectionUtils.getConnection();
         Statement statement = null;
@@ -82,7 +92,11 @@ public class DaoStatementUtils {
         return null;
     }
 
-    //使用游标
+    /**
+     * ResultSet结果分析测试
+     * @param sql
+     * @return
+     */
     public List select1(String sql) {
         Connection connection = JdbcConnectionUtils.getConnection();
         Statement statement = null;
@@ -140,6 +154,10 @@ public class DaoStatementUtils {
     }
 
 
+    /**
+     * ResultSet几个游标特性测试
+     * @param sql
+     */
     public void select2(String sql){
         Connection connection = JdbcConnectionUtils.getConnection();
         Statement statement = null;
@@ -168,6 +186,9 @@ public class DaoStatementUtils {
 
     }
 
+    /**
+     *查看是否支持各种游标特性，不支持的话，就算设置了也是不起作用的
+     */
     public  void testSuport(){
         //查看游标的各种支持情况
         Connection connection = JdbcConnectionUtils.getConnection();
@@ -194,6 +215,9 @@ public class DaoStatementUtils {
         }
     }
 
+    /**
+     * 元数据
+     */
     public void testMetadata(){
         Connection connection = JdbcConnectionUtils.getConnection();
         Statement statement = null;

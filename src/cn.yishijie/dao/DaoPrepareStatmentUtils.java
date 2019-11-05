@@ -35,6 +35,9 @@ public class DaoPrepareStatmentUtils {
         }
     }
 
+    /**
+     * 批量添加数据
+     */
     public void update(){
         String sql0 = "update tb_employee tb set tb.firstName = ? where tb.id = ?";
         String sql1 = "update tb_employee tb set tb.lastName ='lst1xx' where tb.id = 100";

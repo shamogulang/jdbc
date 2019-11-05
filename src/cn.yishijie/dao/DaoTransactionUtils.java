@@ -11,7 +11,7 @@ import java.sql.Statement;
 public class DaoTransactionUtils {
 
     /**
-     * 测试事务
+     * 测试相关事务
      */
     public void update(){
         Connection connection = null;
